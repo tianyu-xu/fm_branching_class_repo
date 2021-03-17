@@ -10,8 +10,8 @@ surnames = ['Sugaro', 'Cuppo', 'Creamoff', 'Bru', 'Lipton']
 # Print out the names and surnames of all the five employees
 # in format "Name Surname". At the moment, for some reason, they are
 # printed as "NameSurname" without a space, which is wrong.
-for i in range(len(names)):
-    print(names[i] + ' ' + surnames[i])
+# for i in range(len(names)):
+#     print(names[i] + ' ' + surnames[i])
 
 
 
@@ -20,3 +20,15 @@ for i in range(len(names)):
 # Commit this within branch 'feature' and then merge to 'master'
 
 # Your code goes here:
+def PrintName(names, surnames):
+    fullnames = []
+    for i in range(len(names)):
+        for j in range(len(surnames)):
+            content = names[i] + ' ' + surnames[j]
+            fullnames.append(content)
+    return fullnames
+
+
+fullnames = PrintName(names, surnames)
+for i in fullnames:
+    print(i)
